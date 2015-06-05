@@ -45,7 +45,7 @@ private:
 
     QButtonGroup *bttnGroup;
     QToolBar *bttnBar;
-    QPushButton *bUvod, *bEditor, *bAutomat, *bDiagram;
+    QPushButton *bUvod, *bEditor, *bAutomat;
     QLabel *lStatus;
     QDockWidget *content;
     QStackedWidget *mainw;

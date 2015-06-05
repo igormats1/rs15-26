@@ -68,7 +68,6 @@
     <addaction name="actionUvod"/>
     <addaction name="actionEditor"/>
     <addaction name="actionAutomat"/>
-    <addaction name="actionDiagram"/>
    </widget>
    <widget class="QMenu" name="menuPomoc">
     <property name="title">

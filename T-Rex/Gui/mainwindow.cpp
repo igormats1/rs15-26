@@ -72,9 +72,6 @@ void MainWindow::setUpMenuActions(){
     connect(bAutomat, SIGNAL(clicked()), &switchForm, SLOT(map()));
     switchForm.setMapping(bAutomat, 2);
 
-    connect(bDiagram, SIGNAL(clicked()), &switchForm, SLOT(map()));
-    switchForm.setMapping(bDiagram, 3);
-
     //postavljanje dogadjaja za menu bar
     connect(ui->actionNapusti_program, SIGNAL(triggered()), this, SLOT(napustiProgram()));
     connect(ui->actionAbout_T_Rex, SIGNAL(triggered()), this, SLOT(about_app()));
@@ -210,17 +207,16 @@ void MainWindow::createButtonGroup(){
     bUvod = createButton("uvod", "Uvod u svet regularnih izraza");
     bEditor = createButton("editor", "Pronadji regularne izraze u tekstu");
     bAutomat = createButton("automat", "Konstruisi automat za regularni izraz");
-    bDiagram = createButton("diagram", "Sastavi regularni izraz");
 
     bttnGroup->addButton(bUvod);
     bttnGroup->addButton(bEditor);
     bttnGroup->addButton(bAutomat);
-    bttnGroup->addButton(bDiagram);
+
 
     bttnBar->addWidget(bUvod);
     bttnBar->addWidget(bEditor);
     bttnBar->addWidget(bAutomat);
-    bttnBar->addWidget(bDiagram);
+
 
     //centritati button-e na sredinu kolone?!
 
@@ -254,7 +250,7 @@ void MainWindow::go_to_form(int i){
 MainWindow::~MainWindow()
 {
     delete ui;
-    delete bUvod; delete bEditor; delete bAutomat; delete bDiagram; delete lStatus;
+    delete bUvod; delete bEditor; delete bAutomat; delete lStatus;
     delete bttnGroup; delete bttnBar; delete content;
     delete mainw;
 }
